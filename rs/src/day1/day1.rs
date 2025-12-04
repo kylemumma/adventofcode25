@@ -27,11 +27,11 @@ fn rotate(start: i32, prefix: char, mut rotation: i32) -> (i32, i32) {
     (rotated.rem_euclid(100), passes)
 }
 
-fn main() {
+pub fn run() {
     let mut ptr = 50;
     let mut ctr = 0;
 
-    let file = File::open("src/input.txt").expect("couldnt open file");
+    let file = File::open("src/day1/input.txt").expect("couldnt open file");
     let reader = io::BufReader::new(file);
     for line in reader.lines() {
         let line = line.expect("couldnt read line");
