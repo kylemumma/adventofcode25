@@ -19,6 +19,8 @@ fn main() {
     println!("Which day would you like to run?");
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("failed to read line");
+    println!("output:");
+    println!();
     let cleaned = input.trim();
     if cleaned == "1" {
         day1::day1::run();
