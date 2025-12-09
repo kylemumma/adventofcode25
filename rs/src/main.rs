@@ -3,6 +3,7 @@ use std::fs;
 
 mod day1;
 mod day2;
+mod day3;
 
 fn get_possible_days() {
     let paths = fs::read_dir("src/").expect("");
@@ -20,12 +21,13 @@ fn main() {
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("failed to read line");
     println!("output:");
-    println!();
     let cleaned = input.trim();
     if cleaned == "1" {
         day1::day1::run();
     } else if cleaned == "2" {
         day2::day2::run();
+    } else if cleaned == "3" {
+        day3::day3::run();
     } else {
         println!("nope:{:?}",cleaned);
     }
